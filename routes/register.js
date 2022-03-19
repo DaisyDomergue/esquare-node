@@ -79,7 +79,7 @@ router.post("/teacher",upload.single('cv'),async (req, res) => {
       level: req.body.level,
       email: req.body.email,
       phone_no: req.body.phone_no,
-      cv_file_path: 'uploads/'+req.cv.filename,
+      // cv_file_path: 'uploads/'+req.cv.filename,
       section: "",
     });
 
