@@ -125,6 +125,8 @@ router.post("/student", async (req, res) => {
 
     try {
       const savedStudent = await student.save();
+      console.log("New Registered Student : ",savedStudent
+      );
       res.json({ message: "Student Created Successfully",...savedStudent.toObject() });
     } catch (err) {
       console.json({ message: err });
