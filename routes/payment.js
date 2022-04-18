@@ -50,7 +50,7 @@ router.get("/createorder/:id", async (req, res) => {
       var options = {
         amount: lvl.price,  // amount in the smallest currency unit
         currency: "INR",
-        receipt:  Math.floor(Math.random() * 10000),
+        receipt:  req.params.id+"-"+Math.floor(Math.random() * 10000),
         payment_capture:1
       };
       instance.orders.create(options, function(err, order) {
