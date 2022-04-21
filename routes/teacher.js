@@ -28,7 +28,7 @@ function getClassCreateLink(fname, lname, level, section) {
   const apiCmd = 'create';
   const userUname = fname + "-" + lname + "-" + Math.random(5);
   const url = "https://bbbdev.esquare-homeschooling.com/bigbluebutton/api/"
-  var addr = `allowStartStopRecording=true&attendeePW=esquare&autoStartRecording=false&meetingID=` + encodeURIComponent(level + "-" + section) + `&moderatorPW=esquare-teacher&name=` + encodeURIComponent(level + "-" + section) + `&record=false&voiceBridge=` + Math.floor(Math.random() * 10000) + `&welcome=%3Cbr%3EWelcome+to+%3Cb%3E%25%25CONFNAME%25%25%3C%2Fb%3E%21`;
+  var addr = `allowStartStopRecording=true&attendeePW=esquare&autoStartRecording=false&meetingID=` + encodeURIComponent(level + "-" + section) + `&moderatorPW=esquare-teacher&name=` + encodeURIComponent(level + "-" + section) + `&record=false&voiceBridge=` + Math.floor(Math.random() * 100000) + `&welcome=%3Cbr%3EWelcome+to+%3Cb%3E%25%25CONFNAME%25%25%3C%2Fb%3E%21`;
   console.log(apiCmd + addr);
   var checksum = crypto.createHash('sha1').update(apiCmd + addr + secret).digest("hex")
   var meetingLink = url + apiCmd + "?" + addr + "&checksum=" + checksum;
