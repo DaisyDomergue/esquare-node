@@ -56,7 +56,7 @@ function getClassLink(fname , lname, level, section){
   const secret = "NkoyvRdIJ6U5csQB09fqS5jbQMD7qjTkIA7eeN1BGo4";
   const apiCmd = 'join';
   const userUname = fname+"-"+lname+"-"+Math.random(5);
-  const url = "https://https://bbbdev.esquare-homeschooling.com/bigbluebutton/api/"
+  const url = "https://bbbdev.esquare-homeschooling.com/bigbluebutton/api/"
   var addr = `fullName=${userUname}&meetingID=`+encodeURIComponent(level+"-"+section)+`&password=esquare&redirect=true`;
   console.log(apiCmd+addr);
   var checksum = crypto.createHash('sha1').update(apiCmd+addr+secret).digest("hex")
